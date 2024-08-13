@@ -36,6 +36,6 @@ function SocialIcons({icon, to}){
 
 function Button (){
   return(
-    <button class="relative px-10 py-2 text-xl font-bold text-gray-800 bg-green-400 rounded shadow-md uppercase font-rubik hover:opacity-90">Resume</button>
+    <button class="relative px-10 py-2 text-xl font-bold text-gray-800 bg-green-400 rounded shadow-md uppercase border-2 border-green-400 font-rubik hover:bg-gray-900 hover:text-green-400">Resume</button>
   )
 }

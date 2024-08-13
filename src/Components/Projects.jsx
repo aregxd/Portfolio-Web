@@ -31,7 +31,7 @@ export default function Projects() {
 function Cards({title, link, github,desc,langs}){
   let languages = langs;
   const list = languages.map( lang => 
-      <li className='w-auto bg-green-400 px-4 py-0.5 text-gray-900 text-sm font-semibold list-none rounded-sm uppercase'>{lang}</li>
+      <li className='w-auto bg-green-400 px-4 py-0.5 text-gray-900 text-xs font-bold list-none rounded-sm uppercase'>{lang}</li>
   );
   return(
     <>
