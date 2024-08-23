@@ -43,6 +43,6 @@ function Button (){
 
 function Overlay({link}){
   return(
-    <a href={link} className='vertical fixed font-rubik border-2 border-l-0 border-green-400 text-gray-900 font-bold bg-green-400 px-2.5 py-5 top-[20%] right-0 rounded-br-lg rounded-tr-lg uppercase md:top-[40%] hover:bg-gray-900 hover:text-green-400'>Contact</a>
+    <a href={link} className='vertical fixed font-rubik border-2 border-l-0 border-green-400 text-green-400 font-bold bg-gray-900 px-2 py-5 top-[20%] right-0 rounded-br-lg rounded-tr-lg uppercase md:top-[40%] md:hover:text-gray-900 md:hover:bg-green-400'>Contact me</a>
   )
 }
