@@ -6,6 +6,8 @@ import Tailwind from '../assets/Skillls/Tailwind.svg'
 import Php from '../assets/Skillls/Php.svg'
 import ReactJs from '../assets/Skillls/React.svg'
 import Java from '../assets/Skillls/Java.svg'
+import Git from '../assets/Skillls/Git.svg'
+import Redux from '../assets/Skillls/Redux.svg'
 
 
 
@@ -19,7 +21,9 @@ export default function Skills() {
             <Card source={JavaScript} name='JavaScript' />
             <Card source={Php} name='PHP' />
             <Card source={Tailwind} name='Tailwind' />
+            <Card source={Git} name='Git' />
             <Card source={ReactJs} name='React' />
+            {/* <Card source={Redux} name='Redux' /> */}
             <Card source={Java} name='Java' />
         </div>
     </div>
