@@ -1,4 +1,7 @@
 import React from 'react'
+import { useTheme } from '../Context/ThemeContext';
+
+// light icons
 import Html from '../assets/Skillls/Html.svg'
 import Css from '../assets/Skillls/Css.svg'
 import JavaScript from '../assets/Skillls/JavaScript.svg'
@@ -9,22 +12,42 @@ import Java from '../assets/Skillls/Java.svg'
 import Git from '../assets/Skillls/Git.svg'
 import Redux from '../assets/Skillls/Redux.svg'
 
+// Dark icons
+import HtmlDark from '../assets/SkilllsDark/Html.svg'
+import CssDark from '../assets/SkilllsDark/Css.svg'
+import JavaScriptDark from '../assets/SkilllsDark/JavaScript.svg'
+import TailwindDark from '../assets/SkilllsDark/Tailwind.svg'
+import PhpDark from '../assets/SkilllsDark/Php.svg'
+import ReactJsDark from '../assets/SkilllsDark/React.svg'
+import JavaDark from '../assets/SkilllsDark/Java.svg'
+import GitDark from '../assets/SkilllsDark/Git.svg'
+import ReduxDark from '../assets/SkilllsDark/Redux.svg'
 
 
 export default function Skills() {
+    const {theme} = useTheme();
+    const HtmlIcon = theme==='dark'?Html:HtmlDark;
+    const CssIcon = theme==='dark'?Css:CssDark;
+    const JavaScriptIcon = theme==='dark'?JavaScript:JavaScriptDark;
+    const TailwindIcon = theme==='dark'?Tailwind:TailwindDark;
+    const PhpIcon = theme==='dark'?Php:PhpDark;
+    const ReactJsIcon = theme==='dark'?ReactJs:ReactJsDark;
+    const JavaIcon = theme==='dark'?Java:JavaDark;
+    const GitIcon = theme==='dark'?Git:GitDark;
+    const ReduxIcon = theme==='dark'?Redux:ReduxDark;
   return (
     <div className='min-h-screen w-full px-12 flex gap-10 flex-col justify-center items-center'>
-        <p className='name font-semibold text-4xl font-rubik uppercase'>Technologies</p>
+        <p className='name font-semibold text-4xl font-rubik uppercase'>Tech</p>
         <div className="w-full flex gap-5 flex-wrap justify-center md:gap-14 md:px-44">
-            <Card source={Html} name='HTML' />
-            <Card source={Css} name='CSS' />
-            <Card source={JavaScript} name='JavaScript' />
-            <Card source={Php} name='PHP' />
-            <Card source={Tailwind} name='Tailwind' />
-            <Card source={Git} name='Git' />
-            <Card source={ReactJs} name='React' />
-            {/* <Card source={Redux} name='Redux' /> */}
-            <Card source={Java} name='Java' />
+            <Card source={HtmlIcon} name='HTML' />
+            <Card source={CssIcon} name='CSS' />
+            <Card source={JavaScriptIcon} name='JavaScript' />
+            <Card source={PhpIcon} name='PHP' />
+            <Card source={TailwindIcon} name='Tailwind' />
+            <Card source={GitIcon} name='Git' />
+            <Card source={ReactJsIcon} name='React' />
+            {/* <Card source={ReduxIcon} name='Redux' /> */}
+            <Card source={JavaIcon} name='Java' />
         </div>
     </div>
   )
