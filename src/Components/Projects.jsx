@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Projects() {
   return (
-    <div className='min-h-screen w-full flex flex-col gap-10 justify-center items-center bg-gray-900'>
-        <p className='text-white font-semibold text-4xl font-rubik uppercase'>Projects</p>
+    <div className='min-h-screen w-full flex px-11 flex-col gap-10 justify-center items-center'>
+        <p className='name font-semibold text-4xl font-rubik uppercase'>Projects</p>
         <div className="w-full flex gap-7 justify-center flex-wrap md:w-4/5">
           <Cards title="Gamer Store"
             link="https://www.gamerstore.kesug.com"
@@ -31,17 +31,17 @@ export default function Projects() {
 function Cards({title, link, github,desc,langs}){
   let languages = langs;
   const list = languages.map( lang => 
-      <li className='w-auto bg-green-400 px-4 py-0.5 text-gray-900 text-xs font-bold list-none rounded-sm uppercase'>{lang}</li>
+      <li className='chips w-auto px-4 py-0.5 text-xs font-bold list-none rounded-sm uppercase'>{lang}</li>
   );
   return(
     <>
-      <div className="py-4 w-[300px] h-auto bg-gray-900 text-white border-2 border-green-400 rounded-sm">
+      <div className="card pb-6 pt-2 w-[300px] h-auto border-2 rounded-sm">
         <div className='flex flex-col gap-3'>
-          <div className="pt-4 w-full flex justify-around">
+          <div className="pt-4 px-4 w-full flex justify-between">
             <p className='font-rubik text-2xl font-semibold uppercase'>{title}</p>
             <div className="flex gap-4 items-center">
-              <a href={link} target='_blank'><i className={link?'fa-solid fa-link':''}></i></a>
-              <a href={github} target='_blank'><i className={github?'fa-solid fa-code-branch':''}></i></a>
+              <a href={link} target='_blank'><i className={link?'fa-solid fa-arrow-up-right-from-square':''}></i></a>
+              <a href={github} target='_blank'><i className={github?'fa-brands fa-github text-lg':''}></i></a>
             </div>
           </div>
           <div className='px-4 text-base font-normal font-poppins'>{desc}</div>

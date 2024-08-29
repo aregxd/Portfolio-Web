@@ -1,10 +1,13 @@
-import Import from './Import/Import'
+import Home from "./Components/Home"
+import Skills from "./Components/Skills"
+import Projects from "./Components/Projects"
 
 function App() {
-
   return (
    <>
-    <Import />
+      <Home />
+      <Skills />
+      <Projects />
    </>
   )
 }

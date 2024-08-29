@@ -1,0 +1,82 @@
+:root{
+    --background-color:#111827;
+    --name:#ffffff;
+    --border-color:#4ADE80;
+    --accent-bg: #4ADE80;
+    --accent-text:#111827;
+    --resume-btn:#4ADE80;
+    --heading-color:#ffffff;
+    --social-icons: #ffffff;
+    --text-color: #ffffff;
+    --link-color:#ffffff;
+    --chips-bg: #4ADE80;
+    --chips-text:#111827;
+}
+
+[data-theme= 'light']{
+    --background-color:#ffffff;
+    --name:#111827; 
+    --border-color:#111827;
+    --accent-bg: #111827;
+    --accent-text:#ffffff;
+    --resume-btn:#111827;
+    --heading-color:#05c64c;
+    --social-icons: #111827;
+    --text-color: #111827;
+    --link-color:#111827;
+    --chips-bg: #111827;
+    --chips-text:#ffffff;
+}
+
+body{
+    background-color: var(--background-color);
+    transition: 0.3s ease all;
+}
+
+.img{
+    border-color: var(--border-color);
+}
+
+.name{
+    color: var(--name);
+}
+.title{
+    background-color: var(--accent-bg);
+    color: var(--accent-text);
+}
+.social{
+    color: var(--social-icons);
+}
+.about{
+    color: var(--text-color);
+}
+.resume{
+    background-color: var(--resume-btn);
+    color: var(--accent-text);
+    border:2.5px solid var(--resume-btn);
+    transition: 0.3s ease all;
+}
+.resume:hover{
+    background-color: var(--background-color);
+    color: var(--resume-btn);
+    border:2.5px solid var(--resume-btn);
+}
+.contact{
+    color: var(--accent-bg);
+    border:2.5px solid var(--accent-bg);
+    border-left: 0;
+}
+.card{
+    border: 2.5px solid;
+    border-color: var(--border-color);
+    color: var(--name);
+}
+.chips{
+    background-color: var(--chips-bg);
+    color: var(--chips-text);
+}
+
+.theme{
+    
+    
+}
