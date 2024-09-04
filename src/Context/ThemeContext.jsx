@@ -1,7 +1,5 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
 
-let i= 1;
-
 const ThemeContext = createContext();
 
 export const useTheme = ()=> useContext(ThemeContext);

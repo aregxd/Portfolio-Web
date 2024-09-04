@@ -5,13 +5,13 @@ import Moon from '../assets/ThemeBtn/moon.svg'
 import { useTheme } from '../Context/ThemeContext';
 
 export default function Home() {
-  const {theme, toggleTheme} = useTheme();
-  const themeIcon = theme==='dark'?Moon:Sun;
+  const { theme, toggleTheme } = useTheme();
+  const themeIcon = theme === 'dark' ? Sun : Moon;
   return (
-   <div className='h-screen w-full flex justify-center items-center flex-wrap'>
+    <div className='h-screen w-full flex justify-center items-center flex-wrap'>
       <div className='h-full w-full flex gap-5 flex-col justify-center items-center mx-10 py-20 md:flex-row md:mx-32 md:gap-16'>
         <div className='w-3/4 h-auto flex justify-center md:w-1/3 '>
-          <img src={HeroImg} alt="Pic" className='img border-4 rounded-full md:w-2/3'/>
+          <img src={HeroImg} alt="Pic" className='img border-4 rounded-full md:w-2/3' />
         </div>
         <div className='h-full w-full flex flex-col gap-6 justify-center items-center md:w-1/2'>
           <p className='name text-4xl font-semibold uppercase font-rubik'>Aprim Regmi</p>
@@ -26,29 +26,29 @@ export default function Home() {
           <Button />
         </div>
       </div>
-      <button className='absolute text-3xl top-[12%] right-[12%]  md:top-[20%] xl:right-[20%]' onClick={toggleTheme}><img src={themeIcon}/></button>
+      <button className='absolute text-3xl top-[12%] right-[12%]  md:top-[20%] xl:right-[20%]' onClick={toggleTheme}><img src={themeIcon} /></button>
       <Overlay link="mailto:aprimregmi24@gmail.com" />
-   </div>
+    </div>
   )
 }
 
 
-function SocialIcons({icon, to}){
+function SocialIcons({ icon, to }) {
   const link = "fa-brands fa-";
-  const iconName = link+icon;
-  return(
+  const iconName = link + icon;
+  return (
     <a href={to} target='_blank' className='text-2xl hover:opacity-80'><i className={iconName}></i></a>
   );
 }
 
-function Button (){
-  return(
+function Button() {
+  return (
     <button className="resume px-10 py-2 text-xl font-bold rounded shadow-md uppercase font-rubik">Resume</button>
   )
 }
 
-function Overlay({link}){
-  return(
+function Overlay({ link }) {
+  return (
     <a href={link} className='contact vertical fixed font-rubik font-bold px-2 py-5 top-[20%] right-0 rounded-br-lg rounded-tr-lg uppercase md:top-[40%]'>Contact me</a>
   )
 }
