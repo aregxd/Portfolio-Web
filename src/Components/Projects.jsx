@@ -5,6 +5,12 @@ export default function Projects() {
     <div className='min-h-screen w-full flex px-11 flex-col gap-10 justify-center items-center'>
         <p className='name font-semibold text-4xl font-rubik uppercase'>Projects</p>
         <div className="w-full flex gap-7 justify-center flex-wrap md:w-4/5">
+          <Cards title="areGen.ai"
+            link="https://aregen-ai-aprim.netlify.app/"
+            github="https://github.com/aprimr/aregen.ai"
+            desc="areGen.ai is a generative AI model built on top of Gemini's API."
+            langs={['React Js','Tailwind','Axios','Gemini Api']}
+          />
           <Cards title="Gamer Store"
             link="https://www.gamerstore.kesug.com"
             github=""
@@ -15,12 +21,6 @@ export default function Projects() {
             link="https://www.fotovista.great-site.net"
             github="https://github.com/aprimr/fotovista"
             desc="FotoVista is a social media app where you can post photos."
-            langs={['HTML','CSS','JS','php']}
-          />
-          <Cards title="Chattly"
-            link=""
-            github="https://github.com/aprimr/chattly"
-            desc="Chattly is a chat room where we can connect with many people."
             langs={['HTML','CSS','JS','php']}
           />
         </div>
@@ -35,7 +35,7 @@ function Cards({title, link, github,desc,langs}){
   );
   return(
     <>
-      <div className="card pb-6 pt-2 w-[300px] h-auto border-2 rounded-sm">
+      <div className="card pb-6 pt-2 w-[300px] h-auto border-2 rounded-sm ">
         <div className='flex flex-col gap-3'>
           <div className="pt-4 px-4 w-full flex justify-between">
             <p className='font-rubik text-2xl font-semibold uppercase'>{title}</p>
